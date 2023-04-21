@@ -12,14 +12,13 @@ MAX_COST_WEEKLY = 120
 start_time = time.time()
 #Load variables
 url = os.getenv("url")
-domain_dict = os.getenv("domain_dict")
 
 
 
 def function():
     counter = 0
     for location, domain in domain_dict.items():
-        with open(f"./data/{datetime.datetime.now().strftime('%d-%m-%Y')}_{MAX_COST_WEEKLY}", "a") as f:
+        with open(f"./data/{datetime.datetime.now().strftime('%d-%m-%Y')}_{MAX_COST_WEEKLY}.txt", "a") as f:
             f.write("-" * 100)
             f.write(f"\nPlaces found at {location} under ${MAX_COST_WEEKLY}\n")
             f.write(f"Time logged: {time.strftime('%d/%m/%Y %H:%M', time.localtime())}\n")
