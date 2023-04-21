@@ -52,7 +52,7 @@ def function():
                         link = nextdiv.find("a", {"aria-label": "Flatmates listing"})['href']
                         link = url+link
                         # print(link)
-                        with open(f"./data/{datetime.datetime.now().strftime('%d-%m-%Y')}_{MAX_COST_WEEKLY}", "a") as f:
+                        with open(f"./data/{datetime.datetime.now().strftime('%d-%m-%Y')}_{MAX_COST_WEEKLY}.txt", "a") as f:
                             f.write(f"${price} \t {link}\n")
                         
                     counter += 1
